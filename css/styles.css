@@ -1,0 +1,425 @@
+:root {
+  --header-color: #ffffff;
+  --header-title: #ffffff;
+  --title-color: #303030;
+  --descr-color: #555555;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 1px solid red;
+}
+
+/* ------------Шапка-------------- */
+
+.header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header-nav {
+  background-color: rgba(25, 28, 38, 0.2);
+}
+
+.header-link,
+.header-tel {
+  color: var(--header-color);
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+}
+
+.header-button,
+.price-button,
+.booking-button {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--header-color);
+}
+
+.header-link:hover,
+.header-tel:hover {
+  color: #ff6c00;
+}
+
+.header-link:focus,
+.header-tel:focus {
+  color: #ff6c00;
+}
+
+/* ----------Герой------------ */
+
+.hero {
+  background-color: gray;
+}
+
+.hero-link {
+  color: var(--title-color);
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+}
+
+.hero-link:focus,
+.hero-link:hover {
+  color: #ff6c00;
+}
+
+.hero-title-before {
+  color: rgba(157, 164, 189, 0.6);
+
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  color: #ffffff;
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+
+  margin-bottom: 20px;
+}
+
+.hero-descr {
+  color: #9da4bd;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+/* ------------Описание барбершопа------- */
+
+.about {
+  padding-top: 139px;
+  padding-bottom: 121px;
+}
+
+.about-title-before {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--title-color);
+
+  margin-bottom: 20px;
+}
+
+.about-title {
+  margin-bottom: 20px;
+}
+
+.about-title,
+.expierence-title,
+.masters-title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+  color: var(--title-color);
+}
+
+.about-title-after {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--descr-color);
+
+  margin-bottom: 20px;
+}
+
+.about-descr {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: var(--descr-color);
+
+  margin-bottom: 40px;
+}
+
+.about-btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+
+/* ------------Цены--------- */
+
+.price {
+  background-color: gray;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.price-title-before {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.6);
+
+  margin-bottom: 20px;
+}
+
+.price-title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+  color: var(--header-title);
+
+  margin-bottom: 44px;
+}
+
+.price-item-descr,
+.price-item-cost {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+/* ----------------Почему нас выбирают---------- */
+
+.experience {
+  padding-top: 121px;
+  padding-bottom: 130px;
+}
+
+.experience-digit {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  letter-spacing: 0.05em;
+  color: var(--title-color);
+}
+
+.experience-item-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  color: var(--title-color);
+}
+
+.expierence-title-before {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--title-color);
+
+  margin-bottom: 20px;
+}
+
+.expierence-title {
+  margin-bottom: 20px;
+}
+
+.expierence-descr {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--descr-color);
+}
+
+/* ---------Мастера----------- */
+
+.masters {
+  padding: 130px 0;
+}
+
+.masters-title-before {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--title-color);
+
+  margin-bottom: 20px;
+}
+
+.masters-title {
+  margin-bottom: 44px;
+}
+
+.masters-item-name {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.38;
+  letter-spacing: 0.02em;
+  color: var(--title-color);
+}
+
+.masters-item-position {
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: 0.02em;
+  color: #ff6c00;
+}
+
+/* ---------Примеры работ-------- */
+
+.samples {
+  padding: 130px 0;
+}
+
+.samples-descr {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--title-color);
+
+  margin-bottom: 44px;
+}
+
+/* ----------Онлайн запись-------- */
+
+.booking-contacts {
+  padding: 130px 0;
+}
+
+.booking,
+.contacts {
+  background-color: gray;
+}
+
+.booking-title,
+.contacts-title {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+  color: var(--header-title);
+}
+
+/* ----------Контакты --------------*/
+
+.contacts-item {
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.contacts-tel,
+.contacts-mail {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.contacts-time {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--header-title);
+}
+
+.contacts-time-descr {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+/* --------- Футер ----------*/
+
+.footer {
+  padding-top: 57px;
+  padding-bottom: 55px;
+}
+
+.footer-copyright {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: #9da4bd;
+}
+
+.footer-social {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: var(--title-color);
+}
