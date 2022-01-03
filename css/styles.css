@@ -299,17 +299,44 @@ img {
 /* ------------Цены--------- */
 
 .price {
-  background-color: gray;
-  background-image: url(../images/price-bg.jpeg);
+  min-width: 1280px;
+  margin: 0 auto;
+  background-color: #111319;
+  background-image: url(../images/price-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding-top: 130px;
   padding-bottom: 130px;
 }
 
+.price-list-left,
+.price-list-right {
+  width: 50%;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 .price-all {
   display: flex;
-  padding-left: 50px;
-  padding-right: 50px;
   margin-bottom: 50px;
+}
+
+.price-list-left {
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  padding: 30px 40px;
+}
+
+.price-list-right {
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  padding: 30px 40px;
 }
 
 .price-title-before {
@@ -358,6 +385,10 @@ img {
   line-height: 1.36;
   letter-spacing: 0.05em;
   color: var(--title-color);
+
+  display: block;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .experience-item-text {
@@ -365,6 +396,10 @@ img {
   font-size: 11px;
   line-height: 1.36;
   color: var(--title-color);
+
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .expierence-title-before {
@@ -380,6 +415,7 @@ img {
 
 .expierence-title {
   margin-bottom: 20px;
+  margin-right: 110px;
 }
 
 .expierence-descr {
@@ -387,6 +423,37 @@ img {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: var(--descr-color);
+  margin-right: 125px;
+}
+
+.expirence-container {
+  display: flex;
+}
+
+.expirenece-container-left {
+  display: flex;
+}
+
+.experience-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.expierenece-container-right {
+  margin-left: 130px;
+}
+.expierence-item {
+  background-color: #f7f7f7;
+  width: 170px;
+  height: 133px;
+
+  flex-basis: calc(100% / 2 - 30px);
+
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
 /* ---------Мастера----------- */
