@@ -62,11 +62,55 @@ img {
   padding-right: 15px;
 }
 
+.title-before {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.title-before::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  margin-right: 21px;
+  background-color: currentColor;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+  color: var(--title-color);
+}
+
+.button {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--header-color);
+  background-color: transparent;
+
+  min-width: 160px;
+  min-height: 40px;
+
+  border: 1px solid var(--second-color);
+  border-radius: 25px;
+}
+
 /* ------------Шапка-------------- */
 
 .header {
-  padding-top: 32px;
   position: absolute;
+
+  padding-top: 32px;
   padding-left: 60px;
 }
 
@@ -105,25 +149,6 @@ img {
   margin-right: 40px;
 }
 
-.header-button,
-.price-button,
-.booking-button {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--header-color);
-  background-color: transparent;
-
-  min-width: 160px;
-  min-height: 40px;
-
-  border: 1px solid var(--second-color);
-  border-radius: 25px;
-}
-
 .header-button:hover {
   color: var(--second-color);
   border: 1px solid #ffffff;
@@ -160,6 +185,14 @@ img {
   flex-wrap: wrap-reverse;
 } */
 
+.hero-social-link::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  margin-right: 40px;
+  background-color: currentColor;
+}
+
 .hero-container {
   display: flex;
 }
@@ -168,8 +201,7 @@ img {
   padding: 272px 0 206px 96px;
   flex-grow: 1;
 
-  max-width: 1073px;
-  background-color: gray;
+  background-color: rgb(32, 32, 32);
   background-image: linear-gradient(
       rgba(25, 28, 38, 0.2),
       rgba(25, 28, 38, 0.2)
@@ -178,6 +210,8 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  max-width: 1073px;
 }
 
 .hero-link:focus,
@@ -187,7 +221,6 @@ img {
 
 .hero-title-before {
   color: rgba(157, 164, 189, 0.6);
-
   margin-bottom: 20px;
 }
 
@@ -237,28 +270,12 @@ img {
 }
 
 .about-title-before {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: var(--title-color);
-
   margin-bottom: 20px;
 }
 
 .about-title {
   margin-bottom: 20px;
-}
-
-.about-title,
-.expierence-title,
-.masters-title {
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.16;
-  letter-spacing: 0.05em;
-  color: var(--title-color);
 }
 
 .about-title-after {
@@ -280,20 +297,8 @@ img {
 }
 
 .about-btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
   color: var(--title-color);
-  background-color: #ffffff;
-
   padding: 12px 20px;
-
-  border: 1px solid var(--second-color);
-  box-sizing: border-box;
-  border-radius: 25px;
 }
 
 /* ------------Цены--------- */
@@ -340,32 +345,41 @@ img {
 }
 
 .price-title-before {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: rgba(157, 164, 189, 0.6);
-
   margin-bottom: 20px;
 }
 
 .price-title {
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.16;
-  letter-spacing: 0.05em;
   color: var(--header-title);
 
   margin-bottom: 44px;
 }
 
-.price-item-descr,
-.price-item-cost {
+.price-item-descr {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
+}
+
+.price-item-descr:first-child {
+  order: -1;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: baseline;
+}
+
+.price-item::before {
+  content: "";
+  height: 1px;
+  flex-grow: 1;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.12);
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .btn {
@@ -403,13 +417,7 @@ img {
 }
 
 .expierence-title-before {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: var(--title-color);
-
   margin-bottom: 20px;
 }
 
@@ -464,11 +472,6 @@ img {
 }
 
 .masters-title-before {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
   color: var(--title-color);
 
   margin-bottom: 20px;
@@ -573,26 +576,40 @@ img {
 
 /* ----------Онлайн запись-------- */
 
-.booking-contacts {
-  padding: 130px 0;
+.connect-wrap {
+  background-color: #191c26;
+  background-image: url(../images/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-size: calc(50% - 15px);
+  background-position: right;
+  min-width: 1280px;
+  margin: 0 auto;
 }
 
-.booking,
-.contacts {
-  background-color: gray;
+.connect-container {
+  display: flex;
+}
+
+.booking {
+  flex-grow: 1;
+  padding-top: 130px;
+  padding-bottom: 130px;
 }
 
 .booking-title,
 .contacts-title {
   font-family: Raleway;
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.16;
-  letter-spacing: 0.05em;
   color: var(--header-title);
 }
 
 /* ----------Контакты --------------*/
+
+.contacts {
+  width: calc(50% - 15px);
+  padding-top: 130px;
+  padding-bottom: 130px;
+  padding-left: 100px;
+}
 
 .contacts-item {
   font-style: normal;
