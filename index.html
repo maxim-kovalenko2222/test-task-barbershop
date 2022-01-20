@@ -26,23 +26,23 @@
             <nav class="header-nav">
                 <ul class="header-list list">
                     <li class="header-item">
-                        <a class="header-link link" href="">О нас</a> 
+                        <a class="header-link link" href="#about">О нас</a> 
                     </li>
                     <li class="header-item">
-                        <a class="header-link link" href="">Услуги и цены</a>
+                        <a class="header-link link current" href="#price">Услуги и цены</a>
                     </li>
                     <li class="header-item">
-                        <a class="header-link link" href="">Мастера</a>
+                        <a class="header-link link" href="#masters">Мастера</a>
                     </li>
                     <li class="header-item">
-                        <a class="header-link link" href="">Контакты</a>
+                        <a class="header-link link" href="#contacts">Контакты</a>
                     </li>
                 </ul>
             </nav>
 
             <div class="header-contact">
                 <a href="tel:+380441111111" class="header-tel link">+38 044 111 11 11</a>
-                <button type="button" class="header-button button">онлайн-запись</button>
+                <button type="button" class="header-button button" data-modal-open>онлайн-запись</button>
             </div>
         </div>
     </header>
@@ -52,14 +52,17 @@
         <!-- Герой -->
         <section class="hero">
             <div class="container hero-container">
-                <ul class="hero-social-link list">
-                    <li class="hero-item ">
-                        <a class="hero-link link" href="" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    </li>
-                    <li class="hero-item">
-                        <a class="hero-link link" href="" target="_blank" rel="noopener noreferrer">Youtube</a>
-                    </li>
-                </ul>
+                <div class="hero-social-box">
+                    <ul class="hero-social-link list">
+                        <li class="hero-item ">
+                            <a class="hero-link link" href="" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        </li>
+                        <li class="hero-item">
+                            <a class="hero-link link" href="" target="_blank" rel="noopener noreferrer">Youtube</a>
+                        </li>
+                    </ul>
+                </div>
+                
                 <div class="hero-main-info">
                     <p class="hero-title-before title-before">A hair salon for men in Kyiv</p>
                     <h1 class="hero-title">BarberShop</h1>
@@ -71,7 +74,7 @@
         </section>
 
         <!-- Описание барбершопа -->
-        <section class="about">
+        <section class="about" id="about">
             <div class="container about-container">
                 <ul class="about-list list">
                     <li class="about-item">
@@ -91,13 +94,13 @@
                 то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда
                 готовы усовершенствовать каждого, кто к нам приходит!
             </p>
-                <button type="button" class="about-btn button">онлайн-запись</button>
+                <button data-modal-open type="button" class="about-btn button">онлайн-запись</button>
             </div>
             </div>
         </section>
 
         <!-- Цены -->
-        <section class="price">
+        <section class="price" id="price">
             <div class="container">
                 <p class="price-title-before title-before">Проведи время в компании лучших мастеров</p>
                 <h2 class="price-title title">Услуги и цены</h2>
@@ -142,7 +145,7 @@
                 
                 </div>
                 <div class="btn">
-                <button type="button" class="price-button button">онлайн-запись</button></div>
+                <button type="button" class="price-button button" data-modal-open>онлайн-запись</button></div>
             </div>
         </section>
 
@@ -180,7 +183,7 @@
         </section>
 
         <!-- Мастера -->
-        <section class="masters">
+        <section class="masters" id="masters">
             <div class="container">
                 <p class="masters-title-before title-before">для настоящих ценителей атмосферы</p>
                 <h2 class="masters-title title">Наши мастера</h2>
@@ -333,31 +336,76 @@
 
         <!-- Онлайн запись / Контакты -->
 
-        <div class="connect-wrap ">
+        <div class="connect-wrap">
             <div class="container connect-container">
                 <section class="booking">
             
                 <h2 class="booking-title title">Онлайн-запись</h2>
+
+                <form action="#" class="booking-form">
+
+                <div class="input-box">
+                    <label class="label-name">
+                        
+                        <input type="text" class="input-name" placeholder=" ">
+                        <span class="label-name-text">Имя<sup>*</sup></span>
+                    </label>
+                    
+                    <label class="label-tel">
+                        <input type="tel" class="input-tel" placeholder=" ">
+                        <span class="label-tel-text">Телефон<sup>*</sup></span>
+                    </label>
+                    
+                </div>
+                
+                <div class="input-comment-box">
+                    <label class="label-comment">
+                        <textarea name="comment" class="input-comment" placeholder=" "></textarea>
+                        <span class="label-comment-text">сообщение</span>
+                    </label>
+                    </label>    
+                    
+                </div>
+
                 <button type="button" class="booking-button button">отправить</button>
+
+                </form>
+
+                
             
             </section>
             
-            <section class="contacts">
+            <section class="contacts" id="contacts">
             
                 <h2 class="contacts-title title">Контакты</h2>
                 <address>
                     <ul class="contacts-list list">
-                        <li class="contacts-item">ул. Васильковая, 7А <br>
-                            Киев, 08132</li>
+                        
                         <li class="contacts-item">
-                            <a href="tel:+380441111111" class=" contacts-tel link">+38 044 111 11 11</a>
+                            <p>ул. Васильковая, 7А <br>
+                            Киев, 08132</p> 
+                            <svg class="contacts-list-icon" width="24" height="24">
+                                <use href="images/sprite.svg#icon-map-pin"></use>
+                            </svg>
                         </li>
+                            
+                        <li class="contacts-item">
+                            <svg class="contacts-list-icon" width="24" height="24">
+                                <use href="images/sprite.svg#icon-phone-icon"></use>
+                            </svg>
+                            <a href="tel:+380441111111" class=" contacts-tel link">+38 044 111 11 11</a>
+                            
+                        </li>
+
                         <li class="contacts-item ">
+                            <svg class="contacts-list-icon" width="24" height="24">
+                                <use href="images/sprite.svg#icon-mail-icon"></use>
+                            </svg>
                             <a href="mailto:barbershop@email.com" class="contacts-mail">barbershop@email.com</a>
                         </li>
                     </ul>
                 </address>
-                <p class="contacts-time">время работы</p>
+                <p class="contacts-time title-before">время работы</p>
                 <p class="contacts-time-descr">Ежедневно с 9:00 до 22:00</p>
             
             </section>
@@ -381,6 +429,20 @@
             </ul>
         </div>
     </footer>
+
+    <!-- Модальное окно -->
+    
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="modal-button-close" data-modal-close>
+                <svg class="modal-button-close-icon" width="11" height="11">
+                    <use href="./images/symbol-defs.svg#icon-close-icon"></use>
+            </button>
+    
+       
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
