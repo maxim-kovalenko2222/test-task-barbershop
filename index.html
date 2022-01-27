@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
 
@@ -29,7 +29,7 @@
                         <a class="header-link link" href="#about">О нас</a> 
                     </li>
                     <li class="header-item">
-                        <a class="header-link link current" href="#price">Услуги и цены</a>
+                        <a class="header-link link" href="#price">Услуги и цены</a>
                     </li>
                     <li class="header-item">
                         <a class="header-link link" href="#masters">Мастера</a>
@@ -94,7 +94,7 @@
                 то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда
                 готовы усовершенствовать каждого, кто к нам приходит!
             </p>
-                <button data-modal-open type="button" class="about-btn button">онлайн-запись</button>
+                <button type="button" class="about-btn button" data-modal-open-about>онлайн-запись</button>
             </div>
             </div>
         </section>
@@ -155,19 +155,19 @@
                 <div class="experience-container-left">
                     <ul class="experience-list list">
                         <li class="expierence-item">
-                            <span class="experience-digit">600</span>
+                            <span class="experience-digit">600<span class="experience-digit-sup">+</span></span>
                             <p class="experience-item-text">Довольных клиентов в день</p>
                         </li>
                         <li class="expierence-item">
-                            <span class="experience-digit">50</span>
+                            <span class="experience-digit">50<span class="experience-digit-sup">+</span></span>
                             <p class="experience-item-text">Наград за отличный сервис</p>
                         </li>
                         <li class="expierence-item">
-                            <span class="experience-digit">20</span>
+                            <span class="experience-digit">20<span class="experience-digit-sup">+</span></span>
                             <p class="experience-item-text">Лучших мастеров Киева</p>
                         </li>
                         <li class="expierence-item">
-                            <span class="experience-digit">100</span>
+                            <span class="experience-digit">100<span class="experience-digit-sup">+</span></span>
                             <p class="experience-item-text">Подарков постоянным клиентам</p>
                         </li>
                     </ul>
@@ -382,12 +382,14 @@
                     <ul class="contacts-list list">
                         
                         <li class="contacts-item">
-                            <p>ул. Васильковая, 7А <br>
-                            Киев, 08132</p> 
+    
                             <svg class="contacts-list-icon" width="24" height="24">
                                 <use href="images/sprite.svg#icon-map-pin"></use>
                             </svg>
+                            <a href="https://goo.gl/maps/17C1ZNZWvCNjXbtR9" class="contacts-location link" target="_blank" rel="noreferrer noopener">ул. Васильковская, 7А <br>
+                                Киев, 08132</a>
                         </li>
+                        
                             
                         <li class="contacts-item">
                             <svg class="contacts-list-icon" width="24" height="24">
@@ -436,11 +438,71 @@
         <div class="modal">
             <button class="modal-button-close" data-modal-close>
                 <svg class="modal-button-close-icon" width="11" height="11">
-                    <use href="./images/symbol-defs.svg#icon-close-icon"></use>
+                    <use href="./images/sprite.svg#icon-close-icon"></use>
             </button>
-    
-       
+
+            <div class="forms">
+                <h3 class="forms__title">онлайн-запись</h3>
+
+                <form name="online-form">
+
+                    <label class="forms-label">
+                        <p class="label-text">Name</p>
+                        <input type="text" name="name" class="forms-input"></input>
+                        
+                    </label>
+                
+                    <label class="forms-label">
+                        <p class="label-text">Tel</p>
+                        <input type="tel" name="tel" class="forms-input"></input>
+                    </label>
+                
+                    <label class="forms-label">
+                        <p class="label-text">service</p>
+                        <input list="service" name="service" class="forms-input">
+                            
+                        </input>
+                        <datalist id="service">
+                            <option>Edge</option>
+                            <option>Firefox</option>
+                            <option>Chrome</option>
+                            <option>Opera</option>
+                            <option>Safari</option>
+                        </datalist>
+                    </label>
+                
+                    <label class="forms-label">
+                        <p class="label-text">Master</p>
+                        <select list="masters" name="master" class="forms-input">
+                            <option value="xs">Extra Small</option>
+                            <option value="s">Small</option>
+                            <option value="m" selected>Medium</option>
+                            <option value="l">Large</option>
+                        </select>
+                    </label>
+                
+                    <label class="forms-label">
+                        <p class="label-text">Date</p>
+                        <input type="datetime-local" name="date" class="forms-input"></input>
+                    </label>
+
+                    <label class="forms-label">
+                        <p class="label-text">comment</p>
+                        <textarea name="comment" class="forms-input forms-input-textarea"></textarea>
+                    </label>
+
+                    <label class="forms-label">
+                        <input type="checkbox" name="terms">
+                        <p class="terms-text">I agree to  <a href="#" class="terms-text-link">everything</a></p>
+                    </label>
+
+                    <button type="submit" class="button forms-button" >submit</button>
+                </form>
+            
+            </div>
         </div>
+
+        
     </div>
     <script src="./js/modal.js"></script>
 </body>

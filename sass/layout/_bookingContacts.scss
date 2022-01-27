@@ -1,0 +1,216 @@
+.connect-wrap {
+  background-color: #191c26;
+  background-image: url(../images/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-size: calc(50% - 15px);
+  background-position: right;
+  min-width: 1280px;
+  margin: 0 auto;
+}
+
+.connect-container {
+  display: flex;
+}
+
+.booking {
+  flex-grow: 1;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.booking-title,
+.contacts-title {
+  font-family: Raleway;
+  color: var(--header-title);
+}
+
+.booking-form {
+  width: 560px;
+  height: 250px;
+}
+
+.input-box {
+  display: flex;
+  margin-top: 45px;
+  margin-bottom: 75px;
+}
+
+.input-name {
+  margin-right: 20px;
+}
+
+.input-name,
+.input-tel {
+  width: 260px;
+  height: 24px;
+  padding: 8px 2px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  color: var(--header-color);
+  cursor: pointer;
+
+  transition: border-bottom 250ms linear;
+}
+
+.input-name:focus,
+.input-tel:focus {
+  border-bottom: 1px solid #ffffff;
+  cursor: auto;
+}
+
+.input-name:focus ~ .label-name-text,
+.input-name:not(:placeholder-shown) ~ .label-name-text {
+  color: #ffffff;
+  transform: translateY(-22px);
+}
+
+.input-tel:focus ~ .label-tel-text,
+.input-tel:not(:placeholder-shown) ~ .label-tel-text {
+  color: #ffffff;
+  transform: translateY(-22px);
+}
+
+.label-name,
+.label-tel {
+  position: relative;
+}
+
+.label-name-text,
+.label-tel-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: rgba(157, 164, 189, 0.4);
+  cursor: pointer;
+
+  transition: transform 250ms linear;
+}
+
+.input-comment-box {
+  margin-bottom: 50px;
+}
+
+.input-comment {
+  width: 560px;
+  height: 30px;
+  padding: 10px 2px 0;
+  font-size: 14px;
+  background-color: #191c26;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  color: var(--header-color);
+  resize: none;
+  text-align: bottom;
+
+  transition: border-bottom 250ms linear;
+  cursor: pointer;
+}
+
+.label-comment {
+  position: relative;
+}
+
+.label-comment-text {
+  position: absolute;
+  left: 0;
+  top: -6px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+  cursor: pointer;
+
+  transition: transform 250ms linear;
+}
+
+.input-comment:focus {
+  border-bottom: 1px solid #ffffff;
+  cursor: auto;
+}
+
+.input-comment:focus + .label-comment-text,
+.input-comment:not(:placeholder-shown) + .label-comment-text {
+  color: #ffffff;
+  transform: translateY(-40px);
+}
+
+/* ----------Контакты --------------*/
+
+.contacts {
+  width: calc(50% - 15px);
+  padding-top: 130px;
+  padding-bottom: 130px;
+  padding-left: 100px;
+}
+
+.contacts-item {
+  position: relative;
+  padding-left: 38px;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts-list-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  transform: translatey(-50%);
+}
+
+.contacts-title {
+  margin-bottom: 40px;
+}
+
+.contacts-tel,
+.contacts-mail,
+.contacts-location {
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.contacts-time {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--header-title);
+
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.contacts-time::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  margin-right: 21px;
+  background-color: rgba(157, 164, 189, 0.4);
+}
+
+.contacts-time-descr {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}

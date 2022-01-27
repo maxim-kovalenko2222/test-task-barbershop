@@ -1,0 +1,87 @@
+.experience {
+  padding-top: 121px;
+  padding-bottom: 130px;
+}
+
+.experience-digit {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  letter-spacing: 0.05em;
+  color: var(--title-color);
+
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.experience-digit-sup {
+  position: absolute;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #ff6c00;
+}
+
+.experience-item-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  color: var(--title-color);
+
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.expierence-title-before {
+  color: var(--title-color);
+  margin-bottom: 20px;
+}
+
+.expierence-title {
+  margin-bottom: 20px;
+  margin-right: 110px;
+}
+
+.expierence-descr {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--descr-color);
+  margin-right: 125px;
+}
+
+.expirence-container {
+  display: flex;
+}
+
+.expirenece-container-left {
+  display: flex;
+}
+
+.experience-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.expierenece-container-right {
+  margin-left: 130px;
+}
+.expierence-item {
+  background-color: #f7f7f7;
+  width: 170px;
+  height: 133px;
+
+  flex-basis: calc(100% / 2 - 30px);
+
+  margin-top: 30px;
+  margin-left: 30px;
+}
