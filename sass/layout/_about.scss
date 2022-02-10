@@ -1,49 +1,84 @@
 .about {
-  padding-top: 139px;
-  padding-bottom: 121px;
+  padding: 84px 0;
+  @media screen and (min-width: 1200px) {
+    padding-top: 139px;
+    padding-bottom: 121px;
+  }
+}
+
+.about-box {
+  display: flex;
+}
+
+.about-img-list {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -30px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    margin-left: -30px;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+      margin-left: 30px;
+    }
+  }
 }
 
 .about-container {
-  display: flex;
-}
+  @media screen and (min-width: 768px) {
+    margin-left: 32px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 64px;
+  }
+  &__title-before {
+    color: var(--title-color);
+    margin-bottom: 20px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-size: 28px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
 
-.about-list {
-  display: flex;
-}
+    @media screen and (min-width: 1200px) {
+      font-size: 42px;
+      line-height: 1.16;
+    }
+  }
 
-.about-item:first-child {
-  margin-right: 30px;
-}
+  &__title-after {
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.02em;
 
-.about-descr-container {
-  padding-left: 64px;
-}
+    color: var(--descr-color);
 
-.about-title-before {
-  color: var(--title-color);
-  margin-bottom: 20px;
-}
+    margin-bottom: 20px;
 
-.about-title {
-  margin-bottom: 20px;
-}
+    @media screen and (min-width: 1200px) {
+      font-size: 18px;
+      line-height: 1.67;
+    }
+  }
 
-.about-title-after {
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
-  color: var(--descr-color);
+  &__text {
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+    color: var(--descr-color);
 
-  margin-bottom: 20px;
-}
-
-.about-descr {
-  font-size: 14px;
-  line-height: 1.86;
-  letter-spacing: 0.02em;
-  color: var(--descr-color);
-
-  margin-bottom: 40px;
+    margin-bottom: 57px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .about-btn {

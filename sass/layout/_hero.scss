@@ -1,69 +1,125 @@
-.hero-link {
-  color: var(--title-color);
+.hero-container {
+  padding: 0;
 
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.2em;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    padding: 0 15px;
+  }
 }
 
 .hero-social-box {
-  width: 93px;
-  display: flex;
-  align-items: flex-end;
-  padding-left: 23px;
-  padding-bottom: 40px;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    width: 93px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 23px;
+    padding-bottom: 40px;
+  }
 }
 
-.hero-social-link {
+.hero-social-list {
   display: flex;
   transform: rotate(-90deg) translate(-15px);
   transform-origin: top left;
   align-items: center;
-}
 
-.hero-social-link::before {
-  content: "";
-  width: 60px;
-  height: 1px;
-  background-color: currentColor;
-  margin-right: 21px;
-}
+  &::before {
+    content: "";
+    width: 60px;
+    height: 1px;
+    background-color: currentColor;
+    margin-right: 21px;
+  }
 
-.hero-container {
-  display: flex;
+  &__item {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+  &__link {
+    color: var(--title-color);
+
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.36;
+    letter-spacing: 0.2em;
+    transition: color 250ms linear;
+    &:focus,
+    &:hover {
+      color: var(--second-color);
+    }
+  }
 }
 
 .hero-main-info {
-  padding: 272px 0 206px 96px;
-  flex-grow: 1;
-
+  padding: 208px 0 183px 30px;
   background-color: rgb(32, 32, 32);
+
   background-image: linear-gradient(
       rgba(25, 28, 38, 0.2),
       rgba(25, 28, 38, 0.2)
     ),
-    url(../images/hero-bg.jpeg);
+    url(../images/hero-mob-1x-min.jpeg);
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  min-width: 1073px;
-}
-.hero-item {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.2em;
-}
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)
+      ),
+      url(../images/hero-mob-2x-min.jpeg);
+  }
 
-.hero-item:not(:last-child) {
-  margin-right: 40px;
-}
+  @media screen and (min-width: 768px) {
+    padding: 272px 0 206px 96px;
+    flex-grow: 1;
 
-.hero-link:focus,
-.hero-link:hover {
-  color: var(--second-color);
+    background-image: linear-gradient(
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)
+      ),
+      url(../images/hero-tab-1x-min.jpeg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(25, 28, 38, 0.2),
+          rgba(25, 28, 38, 0.2)
+        ),
+        url(../images/hero-tab-2x-min.jpeg);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        rgba(25, 28, 38, 0.2),
+        rgba(25, 28, 38, 0.2)
+      ),
+      url(../images/hero-1x-min.jpeg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(25, 28, 38, 0.2),
+          rgba(25, 28, 38, 0.2)
+        ),
+        url(../images/hero-2x-min.jpeg);
+    }
+  }
 }
 
 .hero-title-before {
@@ -76,19 +132,36 @@
 
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 72px;
-  line-height: 1.18;
+  font-size: 32px;
+  line-height: 1.16;
   letter-spacing: 0.05em;
 
   margin-bottom: 20px;
+
+  @media screen and (min-width: 350px) {
+    font-size: 38px;
+  }
+  @media screen and (min-width: 400px) {
+    font-size: 48px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 72px;
+    line-height: 1.18;
+  }
 }
 
-.hero-descr {
+.hero-text {
   color: #9da4bd;
 
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.67;
+  font-size: 16px;
+  line-height: 1.62;
   letter-spacing: 0.02em;
-  max-width: 400px;
+  max-width: 306px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 350px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 400px;
+  }
 }

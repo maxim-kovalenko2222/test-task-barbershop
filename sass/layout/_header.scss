@@ -8,23 +8,77 @@
 
 .header-container {
   display: flex;
-  align-items: center;
+  @media screen and (min-width: 1200px) {
+    align-items: center;
+  }
 }
-
-.header-list {
-  display: flex;
-}
-
 .header-logo {
-  margin-right: 70px;
+  @media screen and (min-width: 768px) {
+    margin-right: 60px;
+  }
 }
 
-.header-item:not(:last-child) {
-  margin-right: 40px;
+.header-logo-icon {
+  fill: #ffffff;
+  @media screen and (min-width: 768px) {
+    fill: var(--title-color);
+  }
 }
 
-.header-link,
-.header-tel {
+.header-nav {
+  &__list {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      margin-right: -25px;
+      padding-top: 8px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding-top: 0;
+    }
+  }
+  &__item {
+    margin-right: 25px;
+  }
+  &__link {
+    color: var(--header-color);
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    transition: color 250ms linear;
+    &:hover,
+    &:focus {
+      color: var(--second-color);
+    }
+  }
+}
+
+.header-contact {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  margin-left: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding-top: 8px;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    padding-top: 0;
+  }
+}
+
+.header-contact-tel {
+  margin-top: 20px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 40px;
+    margin-top: 0;
+  }
+
   color: var(--header-color);
 
   font-weight: 600;
@@ -32,31 +86,41 @@
   line-height: 1.33;
   letter-spacing: 0.1em;
   transition: color 250ms linear;
-}
 
-.header-link:hover,
-.header-tel:hover {
-  color: var(--second-color);
-}
-
-.header-link:focus,
-.header-tel:focus {
-  color: var(--second-color);
-}
-
-.header-contact {
-  margin-left: auto;
-}
-
-.header-tel {
-  margin-right: 40px;
+  &:hover,
+  &:focus {
+    color: var(--second-color);
+  }
 }
 
 .header-button {
   transition: color 250ms linear, border 250ms linear;
+  &:hover,
+  &:focus {
+    color: var(--second-color);
+    border: 1px solid #ffffff;
+  }
 }
 
-.header-button:hover {
-  color: var(--second-color);
-  border: 1px solid #ffffff;
+.mobile-menu-open-btn {
+  margin-left: auto;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  width: 75vw;
+  height: 100vh;
+  background-color: aquamarine;
+
+  transition: right 500ms linear;
+}
+
+.mobile-menu.is-hidden {
+  right: 100%;
 }
