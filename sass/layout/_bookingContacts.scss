@@ -1,38 +1,55 @@
+.booking {
+  padding: 84px 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 100px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 130px 0;
+  }
+}
+
 .connect-wrap {
   background-color: #191c26;
   background-image: url(../images/contacts-bg.png);
   background-repeat: no-repeat;
-  background-size: calc(50% - 15px);
-  background-position: right;
-  min-width: 1280px;
+  background-size: 100%;
+  background-position: bottom;
+
   margin: 0 auto;
+
+  @media screen and (min-width: 1200px) {
+    background-size: calc(50% - 15px);
+    min-width: 1280px;
+    background-position: right;
+  }
 }
 
 .connect-container {
   display: flex;
-}
-
-.booking {
-  flex-grow: 1;
-  padding-top: 130px;
-  padding-bottom: 130px;
+  flex-direction: column;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
 
 .booking-title,
 .contacts-title {
+  text-align: center;
   font-family: Raleway;
   color: var(--header-title);
 }
 
-.booking-form {
-  width: 560px;
-  height: 250px;
-}
-
 .input-box {
   display: flex;
+  flex-direction: column;
   margin-top: 45px;
-  margin-bottom: 75px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .input-name {
@@ -41,9 +58,10 @@
 
 .input-name,
 .input-tel {
-  width: 260px;
+  width: 100%;
   height: 24px;
   padding: 8px 2px;
+  margin-bottom: 44px;
   font-size: 14px;
   border: none;
   outline: none;
@@ -53,6 +71,13 @@
   cursor: pointer;
 
   transition: border-bottom 250ms linear;
+
+  @media screen and (min-width: 768px) {
+    width: 330px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
 }
 
 .input-name:focus,
@@ -101,7 +126,7 @@
 }
 
 .input-comment {
-  width: 560px;
+  width: 100%;
   height: 30px;
   padding: 10px 2px 0;
   font-size: 14px;
@@ -148,13 +173,42 @@
   transform: translateY(-40px);
 }
 
+.booking-button {
+  display: block;
+  margin: 0 auto;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
+}
+
 /* ----------Контакты --------------*/
 
 .contacts {
-  width: calc(50% - 15px);
-  padding-top: 130px;
-  padding-bottom: 130px;
-  padding-left: 100px;
+  @media screen and (min-width: 1200px) {
+    width: calc(50% - 15px);
+    padding-top: 130px;
+    padding-bottom: 130px;
+    padding-left: 100px;
+  }
+}
+
+.contacts {
+  padding: 84px 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 100px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 130px 0;
+  }
+}
+
+.contacts-list {
+  @media screen and (min-width: 768px) {
+    max-width: 290px;
+  }
 }
 
 .contacts-item {
@@ -196,8 +250,12 @@
   text-transform: uppercase;
   color: var(--header-title);
 
-  margin-top: 70px;
+  margin-top: 44px;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
 }
 
 .contacts-time::before {
@@ -213,4 +271,21 @@
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
+}
+
+.contacts-time-box {
+  @media screen and (min-width: 1200px) {
+    margin-top: 70px;
+  }
+}
+
+.contacts--geometry {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }

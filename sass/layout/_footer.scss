@@ -1,6 +1,6 @@
 .footer {
-  padding-top: 57px;
-  padding-bottom: 55px;
+  padding-top: 44px;
+  padding-bottom: 44px;
 }
 
 .contaiter-footer {
@@ -11,6 +11,15 @@
 .footer-list {
   display: flex;
   margin-left: auto;
+  align-items: center;
+}
+
+.footer-list::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
+  margin-right: 21px;
 }
 
 .footer-item:last-child {
@@ -24,7 +33,11 @@
   letter-spacing: 0.2em;
   color: #9da4bd;
 
-  padding-left: 55px;
+  padding-top: 35px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 0;
+  }
 }
 
 .footer-social {

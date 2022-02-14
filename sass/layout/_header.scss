@@ -101,26 +101,3 @@
     border: 1px solid #ffffff;
   }
 }
-
-.mobile-menu-open-btn {
-  margin-left: auto;
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-}
-
-.mobile-menu {
-  position: fixed;
-
-  top: 0;
-  right: 0;
-  width: 75vw;
-  height: 100vh;
-  background-color: aquamarine;
-
-  transition: right 500ms linear;
-}
-
-.mobile-menu.is-hidden {
-  right: 100%;
-}
